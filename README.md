@@ -44,7 +44,7 @@ $ roslaunch kinect2_bridge kinect2_bridge.launch
 
 ターミナル3
 ```
-$ rosrun 画像表示のなんか
+$ rosrun kinect2_viewer kinect2_viewer kinect2 sd cloud
 ```
 
 ## 開発
