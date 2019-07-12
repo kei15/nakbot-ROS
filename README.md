@@ -39,7 +39,7 @@ $ roscore
 
 ターミナル2
 ```
-$ roslaunch
+$ roslaunch kinect2_bridge kinect2_bridge.launch
 ```
 
 ターミナル3
