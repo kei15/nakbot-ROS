@@ -14,20 +14,20 @@ def callback(data):
     # 3D position for each pixel
     img = numpy.fromstring(data.data, numpy.float32)
 
-    cloud_points = []
     clp0 = []
     clp1 = []
+    clp2 = []
     for p in pc2.read_points(data, field_names = ("x", "y", "z"), skip_nans=False):
-        cloud_points.append(p[2])
         clp0.append(p[0])
         clp1.append(p[1])
+        clp2.append(p[2])
 
     x_points = numpy.array(clp0, dtype=numpy.float32)
     y_points = numpy.array(clp1, dtype=numpy.float32)
+    z_points = numpy.array(clp2, dtype=numpy.float32)
+
     x = x_points.reshape(resolution)
     y = y_points.reshape(resolution)
-
-    z_points = numpy.array(cloud_points, dtype=numpy.float32)
     z = z_points.reshape(resolution)
 
     print ("x: " + str(x[data.height/2 , data.width/4]) + ", y: " + str(y[data.height/2 , data.width/4]) + ", z: " + str(z[data.height/2 , data.width/4]))
