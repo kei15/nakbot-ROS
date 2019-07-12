@@ -18,7 +18,7 @@ developブランチをインストールするようにしてください。よ�
 
 ```
 $ cd ~/catkin_ws/src
-$ git clone httppppppppppppp
+$ git clone https://github.com/kei15/nakbot_ROS/tree/develop
 ```
 
 インストールが完了したら以下のように「好きな名前」でディレクトリを作成し、そこにコードを書いてください。　
